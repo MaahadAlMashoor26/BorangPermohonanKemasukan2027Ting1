@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borang Permohonan Kemasukan T1 MMI Tahun 2027</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        emeraldCustom: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            600: '#059669',
+                            700: '#047857',
+                            800: '#065f46',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans min-h-screen flex flex-col antialiased">
+
+    <!-- Top Navigation Bar (No Logo) -->
+    <header class="bg-slate-900 text-white shadow-md sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Title without any logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="h-8 w-1 bg-emerald-500 rounded-full"></div>
+                    <h1 class="text-lg sm:text-xl font-bold tracking-tight text-white">
+                        Permohonan Kemasukan T1 MMI 2027
+                    </h1>
+                </div>
+                
+                <!-- Tab Switching Navigation -->
+                <nav class="flex space-x-1 sm:space-x-2">
+                    <button id="tabFormBtn" onclick="switchTab('form')" class="px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium rounded-lg transition-all duration-200 bg-emerald-600 text-white shadow-sm flex items-center space-x-2">
+                        <i class="fa-solid fa-file-pen"></i>
+                        <span>Borang Permohonan</span>
+                    </button>
+                    <button id="tabDashboardBtn" onclick="switchTab('dashboard')" class="px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium rounded-lg transition-all duration-200 text-slate-300 hover:text-white hover:bg-slate-800 flex items-center space-x-2">
+                        <i class="fa-solid fa-gauge-high"></i>
+                        <span>Dashboard</span>
+                        <span id="badgeCount" class="bg-emerald-500 text-slate-950 font-bold px-2 py-0.5 rounded-full text-xs ml-1">0</span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="flex-grow max-w-5xl w-full mx-auto px-4 sm:px-6 py-6 sm:py-8">
+
+        <!-- FORM VIEW -->
+        <div id="formView" class="space-y-6">
+
+            <!-- Title Card -->
+            <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200">
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 mb-3">
+                    <i class="fa-solid fa-calendar-check mr-1.5"></i> Tahun Pengajian 2027
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                    Borang Permohonan Kemasukan T1 MMI Tahun 2027
+                </h2>
+                <p class="mt-2 text-slate-600 text-sm sm:text-base">
+                    Sila baca syarat dan panduan permohonan dengan teliti sebelum melengkapkan maklumat pelajar di bawah.
+                </p>
+            </div>
+
+            <!-- Requirements and Guidelines Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- Syarat Kemasukan -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-graduation-cap text-lg"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900">Syarat Kemasukan</h3>
+                    </div>
+                    <ul class="space-y-3 text-sm text-slate-600 flex-grow">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-circle-check text-blue-500 mt-1 mr-2.5 flex-shrink-0"></i>
+                            <span>LULUS UJIAN KEMASUKAN YANG DIKENDALIKAN OLEH SEKOLAH.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-circle-check text-blue-500 mt-1 mr-2.5 flex-shrink-0"></i>
+                            <div>
+                                <span class="font-semibold text-slate-800">PELAJAR AKAN DINILAI SECARA:</span>
+                                <ul class="mt-1 space-y-1 pl-1 text-slate-600">
+                                    <li>• <strong>UJIAN BERTULIS:</strong> (1) Bahasa Arab (2) Bahasa Inggeris (3) Matematik</li>
+                                    <li>• <strong>UJIAN LISAN:</strong> BACAAN ALQURAN & HAFAZAN (SURAH DHUHA HINGGA AN-NAS)</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-circle-check text-blue-500 mt-1 mr-2.5 flex-shrink-0"></i>
+                            <span>HANYA PELAJAR WARGANEGARA TAHUN KELAHIRAN <strong>2014 SAHAJA</strong> LAYAK MEMOHON.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Panduan Permohonan Kemasukan -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-circle-info text-lg"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900">Panduan Permohonan</h3>
+                    </div>
+                    <ol class="space-y-2.5 text-sm text-slate-600 list-decimal list-inside flex-grow">
+                        <li>Sila isi form ini dengan lengkap.</li>
+                        <li>Muat turun (Download) borang permohonan kemasukan.</li>
+                        <li>Isi borang permohonan kemasukan dengan lengkap.</li>
+                        <li>Tarikh Permohonan dibuka sehingga <strong>6 November 2026</strong>.</li>
+                        <li>Waris pemohon WAJIB menyertai link Whatsapp di bawah untuk maklumat temuduga pelajar.</li>
+                        <li>Tarikh temuduga pada <strong>14 November 2026 (Sabtu)</strong>. Maklumat detail akan dimasukkan dalam group whatsapp.</li>
+                        <li>Bayaran sebanyak <strong>RM10.00</strong> dikenakan semasa penyerahan borang di pejabat sekolah.</li>
+                        <li>Borang Permohonan hendaklah dihantar ke pejabat sekolah sebelum <strong>6 November 2026</strong>.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- External Links Action Box -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <!-- Download Form Button Card -->
+                <div class="bg-slate-900 text-white p-5 rounded-2xl flex items-center justify-between shadow-sm">
+                    <div class="space-y-1">
+                        <p class="text-xs text-slate-400 font-medium">Langkah 1</p>
+                        <h4 class="font-bold text-sm sm:text-base">Muat Turun Borang PDF</h4>
+                    </div>
+                    <a href="https://acrobat.adobe.com/id/urn:aaid:sc:AP:285a0db5-d04f-44fb-ba25-7d9d7e74a90d" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold text-xs sm:text-sm transition-colors shadow-sm">
+                        <i class="fa-solid fa-file-pdf mr-2"></i> Muat Turun
+                    </a>
+                </div>
+
+                <!-- WhatsApp Link Card -->
+                <div class="bg-emerald-800 text-white p-5 rounded-2xl flex items-center justify-between shadow-sm">
+                    <div class="space-y-1">
+                        <p class="text-xs text-emerald-200 font-medium">Langkah 2 (WAJIB)</p>
+                        <h4 class="font-bold text-sm sm:text-base">Sertai Group WhatsApp</h4>
+                    </div>
+                    <a href="https://chat.whatsapp.com/HMvnWaEJjFg0giNG0kNojX" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2.5 rounded-xl bg-green-500 hover:bg-green-600 text-white font-bold text-xs sm:text-sm transition-colors shadow-sm">
+                        <i class="fa-brands fa-whatsapp mr-2 text-lg"></i> Sertai Group
+                    </a>
+                </div>
+            </div>
+
+            <!-- Application Form Controls -->
+            <form id="applicationForm" onsubmit="handleFormSubmit(event)" class="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200 space-y-6">
+                
+                <div class="border-b border-slate-200 pb-4 mb-2">
+                    <h3 class="text-lg font-bold text-slate-900">Maklumat Pemohon & Waris</h3>
+                    <p class="text-xs text-slate-500">Sila pastikan semua maklumat dimasukkan dengan tepat.</p>
+                </div>
+
+                <!-- 1. Nama Pelajar -->
+                <div>
+                    <label for="namaPelajar" class="block text-sm font-semibold text-slate-700 mb-1">
+                        NAMA PELAJAR <span class="text-slate-400 font-normal">(Nama Penuh Seperti pada Kad Pengenalan)</span> <span class="text-rose-500">*</span>
+                    </label>
+                    <input type="text" id="namaPelajar" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm outline-none transition-all placeholder:text-slate-400" placeholder="E.g. AHMAD BIN ABDULLAH">
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- 2. Jantina -->
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">
+                            JANTINA <span class="text-rose-500">*</span>
+                        </label>
+                        <div class="flex items-center space-x-6 pt-1">
+                            <label class="inline-flex items-center cursor-pointer">
+                                <input type="radio" name="jantina" value="LELAKI" required class="w-4 h-4 text-emerald-600 focus:ring-emerald-500 border-slate-300">
+                                <span class="ml-2 text-sm text-slate-700 font-medium">LELAKI</span>
+                            </label>
+                            <label class="inline-flex items-center cursor-pointer">
+                                <input type="radio" name="jantina" value="PEREMPUAN" class="w-4 h-4 text-emerald-600 focus:ring-emerald-500 border-slate-300">
+                                <span class="ml-2 text-sm text-slate-700 font-medium">PEREMPUAN</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- 3. No Kad Pengenalan -->
+                    <div>
+                        <label for="noKp" class="block text-sm font-semibold text-slate-700 mb-1">
+                            NO KAD PENGENALAN <span class="text-slate-400 font-normal">(Pelajar - Lahir 2014)</span> <span class="text-rose-500">*</span>
+                        </label>
+                        <input type="text" id="noKp" placeholder="E.g. 140512075543" required pattern="[0-9\-]+" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm outline-none transition-all">
+                    </div>
+                </div>
+
+                <!-- 4. Sekolah Terkini -->
+                <div>
+                    <label for="sekolahTerkini" class="block text-sm font-semibold text-slate-700 mb-1">
+                        SEKOLAH TERKINI <span class="text-slate-400 font-normal">(Sekolah Rendah)</span> <span class="text-rose-500">*</span>
+                    </label>
+                    <input type="text" id="sekolahTerkini" placeholder="E.g. SK TAMAN INDAH" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm outline-none transition-all">
+                </div>
+
+                <!-- 5. Alamat Terkini -->
+                <div>
+                    <label for="alamatTerkini" class="block text-sm font-semibold text-slate-700 mb-1">
+                        ALAMAT TERKINI <span class="text-rose-500">*</span>
+                    </label>
+                    <textarea id="alamatTerkini" rows="3" placeholder="Masukkan alamat kediaman lengkap" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm outline-none transition-all"></textarea>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- 6. No Telefon Bapa -->
+                    <div>
+                        <label for="noTelBapa" class="block text-sm font-semibold text-slate-700 mb-1">
+                            NO TELEFON BAPA <span class="text-rose-500">*</span>
+                        </label>
+                        <input type="tel" id="noTelBapa" placeholder="E.g. 0123456789" required pattern="[0-9\-\+]+" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm outline-none transition-all">
+                    </div>
+
+                    <!-- 7. No Telefon Ibu -->
+                    <div>
+                        <label for="noTelIbu" class="block text-sm font-semibold text-slate-700 mb-1">
+                            NO TELEFON IBU <span class="text-rose-500">*</span>
+                        </label>
+                        <input type="tel" id="noTelIbu" placeholder="E.g. 0198765432" required pattern="[0-9\-\+]+" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm outline-none transition-all">
+                    </div>
+                </div>
+
+                <!-- 8. Muat Naik Fail (Keputusan PBD) -->
+                <div>
+                    <label for="filePBD" class="block text-sm font-semibold text-slate-700 mb-1">
+                        MUAT NAIK FAIL <span class="text-slate-400 font-normal">( Keputusan PBD )</span> <span class="text-rose-500">*</span>
+                    </label>
+                    <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-slate-300 border-dashed rounded-2xl hover:border-emerald-500 transition-colors bg-slate-50/50">
+                        <div class="space-y-1 text-center">
+                            <i class="fa-solid fa-cloud-arrow-up text-3xl text-slate-400 mb-2"></i>
+                            <div class="flex text-sm text-slate-600">
+                                <label for="filePBD" class="relative cursor-pointer bg-white rounded-md font-semibold text-emerald-600 hover:text-emerald-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-emerald-500 px-2 py-0.5">
+                                    <span>Pilih fail dokumen</span>
+                                    <input id="filePBD" name="filePBD" type="file" required accept=".pdf,.jpg,.jpeg,.png" class="sr-only" onchange="handleFileSelect(this)">
+                                </label>
+                                <p class="pl-1">atau seret dan lepas</p>
+                            </div>
+                            <p class="text-xs text-slate-500">PDF, PNG, JPG sehingga 10MB</p>
+                            <p id="fileNameDisplay" class="text-xs font-semibold text-emerald-700 mt-2 hidden"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. Perakuan Checkbox -->
+                <div class="p-4 rounded-xl bg-amber-50/60 border border-amber-200/80">
+                    <label class="flex items-start space-x-3 cursor-pointer">
+                        <input type="checkbox" id="perakuan" required class="mt-1 h-4 w-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300">
+                        <span class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                            <strong>PERAKUAN:</strong> Saya mengaku bahawa semua maklumat yang diberikan adalah benar dan betul. Sekiranya maklumat didapati palsu, pihak sekolah berhak membatalkan permohonan ini.
+                        </span>
+                    </label>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="pt-2">
+                    <button type="submit" id="submitBtn" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center space-x-2 text-base">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>Hantar Permohonan</span>
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+
+        <!-- DASHBOARD VIEW (Hidden by default) -->
+        <div id="dashboardView" class="hidden space-y-6">
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900">Dashboard Permohonan</h2>
+                    <p class="text-sm text-slate-500">Senarai rekod permohonan yang telah dihantar ke sistem.</p>
+                </div>
+                <button onclick="switchTab('form')" class="px-4 py-2 bg-emerald-600 text-white text-xs sm:text-sm font-semibold rounded-xl hover:bg-emerald-700 transition-colors flex items-center space-x-2">
+                    <i class="fa-solid fa-plus"></i>
+                    <span>Permohonan Baru</span>
+                </button>
+            </div>
+
+            <!-- Stats Overview -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-center space-x-4">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-folder-open"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Jumlah Permohonan</p>
+                        <h3 id="statTotal" class="text-2xl font-black text-slate-900">0</h3>
+                    </div>
+                </div>
+
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-center space-x-4">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-venus-mars"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Nisbah Jantina</p>
+                        <h3 id="statGender" class="text-sm font-bold text-slate-900">L: 0 | P: 0</h3>
+                    </div>
+                </div>
+
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-center space-x-4">
+                    <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Status Temuduga</p>
+                        <h3 class="text-sm font-bold text-slate-900">14 Nov 2026</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Submissions Table Card -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                <div class="p-4 sm:p-6 border-b border-slate-200 flex justify-between items-center bg-slate-50/50">
+                    <h3 class="font-bold text-slate-800 text-base">Senarai Permohonan Terkini</h3>
+                    <button onclick="clearAllSubmissions()" class="text-xs text-rose-600 hover:text-rose-800 font-semibold flex items-center space-x-1">
+                        <i class="fa-solid fa-trash-can"></i>
+                        <span>Kosongkan Senarai</span>
+                    </button>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-slate-100/70 text-slate-600 uppercase text-[11px] font-bold tracking-wider border-b border-slate-200">
+                                <th class="py-3.5 px-4">Nama Pelajar</th>
+                                <th class="py-3.5 px-4">No. KP</th>
+                                <th class="py-3.5 px-4">Jantina</th>
+                                <th class="py-3.5 px-4">Sekolah Terkini</th>
+                                <th class="py-3.5 px-4">No. Tel Bapa / Ibu</th>
+                                <th class="py-3.5 px-4">Fail PBD</th>
+                                <th class="py-3.5 px-4">Tarikh Hantar</th>
+                            </tr>
+                        </thead>
+                        <tbody id="submissionsTableBody" class="divide-y divide-slate-200 text-sm text-slate-700">
+                            <!-- Rows injected via JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Empty state -->
+                <div id="emptyState" class="p-12 text-center text-slate-400 space-y-3">
+                    <i class="fa-regular fa-folder-open text-4xl mb-1"></i>
+                    <p class="text-sm font-medium">Tiada permohonan direkodkan lagi.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Modal Confirmation / Success Notification -->
+    <div id="successModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 text-center space-y-5 shadow-2xl transform transition-all scale-100">
+            <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-3xl">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            
+            <div class="space-y-2">
+                <h3 class="text-2xl font-bold text-slate-900">Permohonan Berjaya Dihantar!</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    Terima kasih. Permohonan pelajar telah kami terima dan direkodkan ke dalam sistem.
+                </p>
+            </div>
+
+            <div class="p-4 bg-slate-50 rounded-2xl text-left text-xs space-y-2 border border-slate-200 text-slate-700">
+                <p><strong>Peringatan Penting:</strong></p>
+                <p>• Sila pastikan anda menyertai Group WhatsApp untuk info temuduga pada <strong>14 November 2026</strong>.</p>
+                <p>• Sediakan bayaran <strong>RM10.00</strong> semasa penyerahan borang fizikal di pejabat sekolah sebelum <strong>6 November 2026</strong>.</p>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                <a href="https://chat.whatsapp.com/HMvnWaEJjFg0giNG0kNojX" target="_blank" class="w-full py-3 px-4 bg-green-500 hover:bg-green-600 text-white font-bold rounded-xl text-xs sm:text-sm flex items-center justify-center space-x-2 transition-colors">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span>Sertai Group WhatsApp</span>
+                </a>
+                <button onclick="closeModalAndGoDashboard()" class="w-full py-3 px-4 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-xl text-xs sm:text-sm transition-colors">
+                    Lihat Dashboard
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Store submissions in LocalStorage for persistence
+        let submissions = JSON.parse(localStorage.getItem('mmi_submissions_2027')) || [];
+
+        // Initialize state on load
+        window.addEventListener('DOMContentLoaded', () => {
+            updateDashboard();
+        });
+
+        // Tab Switching Logic
+        function switchTab(tab) {
+            const formView = document.getElementById('formView');
+            const dashboardView = document.getElementById('dashboardView');
+            const tabFormBtn = document.getElementById('tabFormBtn');
+            const tabDashboardBtn = document.getElementById('tabDashboardBtn');
+
+            if (tab === 'form') {
+                formView.classList.remove('hidden');
+                dashboardView.classList.add('hidden');
+                
+                tabFormBtn.className = "px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium rounded-lg transition-all duration-200 bg-emerald-600 text-white shadow-sm flex items-center space-x-2";
+                tabDashboardBtn.className = "px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium rounded-lg transition-all duration-200 text-slate-300 hover:text-white hover:bg-slate-800 flex items-center space-x-2";
+            } else {
+                formView.classList.add('hidden');
+                dashboardView.classList.remove('hidden');
+
+                tabDashboardBtn.className = "px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium rounded-lg transition-all duration-200 bg-emerald-600 text-white shadow-sm flex items-center space-x-2";
+                tabFormBtn.className = "px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium rounded-lg transition-all duration-200 text-slate-300 hover:text-white hover:bg-slate-800 flex items-center space-x-2";
+                
+                updateDashboard();
+            }
+        }
+
+        // File Selection Helper
+        function handleFileSelect(input) {
+            const display = document.getElementById('fileNameDisplay');
+            if (input.files && input.files[0]) {
+                display.textContent = `Fail dipilih: ${input.files[0].name}`;
+                display.classList.remove('hidden');
+            } else {
+                display.classList.add('hidden');
+            }
+        }
+
+        // Form Submit Handler (Active 'Hantar Permohonan' Button)
+        function handleFormSubmit(e) {
+            e.preventDefault();
+
+            const namaPelajar = document.getElementById('namaPelajar').value.trim();
+            const jantina = document.querySelector('input[name="jantina"]:checked')?.value || '';
+            const noKp = document.getElementById('noKp').value.trim();
+            const sekolahTerkini = document.getElementById('sekolahTerkini').value.trim();
+            const alamatTerkini = document.getElementById('alamatTerkini').value.trim();
+            const noTelBapa = document.getElementById('noTelBapa').value.trim();
+            const noTelIbu = document.getElementById('noTelIbu').value.trim();
+            const fileInput = document.getElementById('filePBD');
+            const fileName = fileInput.files[0] ? fileInput.files[0].name : 'PBD_Dokumen.pdf';
+
+            // Construct New Entry Object
+            const newApplication = {
+                id: Date.now(),
+                namaPelajar,
+                jantina,
+                noKp,
+                sekolahTerkini,
+                alamatTerkini,
+                noTelBapa,
+                noTelIbu,
+                fileName,
+                tarikh: new Date().toLocaleString('ms-MY', {
+                    day: '2-digit',
+                    month: '2-digit',
+                    year: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                })
+            };
+
+            // Push to local array & save
+            submissions.unshift(newApplication);
+            localStorage.setItem('mmi_submissions_2027', JSON.stringify(submissions));
+
+            // Show Success Modal Notification
+            document.getElementById('successModal').classList.remove('hidden');
+        }
+
+        // Close Modal & Switch to Dashboard
+        function closeModalAndGoDashboard() {
+            document.getElementById('successModal').classList.add('hidden');
+            document.getElementById('applicationForm').reset();
+            document.getElementById('fileNameDisplay').classList.add('hidden');
+            switchTab('dashboard');
+        }
+
+        // Update Dashboard Data and Render Table
+        function updateDashboard() {
+            const tbody = document.getElementById('submissionsTableBody');
+            const emptyState = document.getElementById('emptyState');
+            const badgeCount = document.getElementById('badgeCount');
+            const statTotal = document.getElementById('statTotal');
+            const statGender = document.getElementById('statGender');
+
+            badgeCount.textContent = submissions.length;
+            statTotal.textContent = submissions.length;
+
+            const lelakiCount = submissions.filter(s => s.jantina === 'LELAKI').length;
+            const perempuanCount = submissions.filter(s => s.jantina === 'PEREMPUAN').length;
+            statGender.textContent = `L: ${lelakiCount} | P: ${perempuanCount}`;
+
+            tbody.innerHTML = '';
+
+            if (submissions.length === 0) {
+                emptyState.classList.remove('hidden');
+            } else {
+                emptyState.classList.add('hidden');
+                
+                submissions.forEach((item) => {
+                    const tr = document.createElement('tr');
+                    tr.className = "hover:bg-slate-50 transition-colors";
+                    tr.innerHTML = `
+                        <td class="py-3.5 px-4 font-semibold text-slate-900">${escapeHtml(item.namaPelajar)}</td>
+                        <td class="py-3.5 px-4">${escapeHtml(item.noKp)}</td>
+                        <td class="py-3.5 px-4">
+                            <span class="px-2.5 py-1 rounded-full text-[11px] font-bold ${item.jantina === 'LELAKI' ? 'bg-blue-100 text-blue-800' : 'bg-pink-100 text-pink-800'}">
+                                ${item.jantina}
+                            </span>
+                        </td>
+                        <td class="py-3.5 px-4">${escapeHtml(item.sekolahTerkini)}</td>
+                        <td class="py-3.5 px-4 text-xs">
+                            <div><strong>Bapa:</strong> ${escapeHtml(item.noTelBapa)}</div>
+                            <div><strong>Ibu:</strong> ${escapeHtml(item.noTelIbu)}</div>
+                        </td>
+                        <td class="py-3.5 px-4">
+                            <span class="inline-flex items-center text-xs text-emerald-700 bg-emerald-50 px-2 py-1 rounded border border-emerald-200">
+                                <i class="fa-solid fa-file-pdf mr-1"></i> ${escapeHtml(item.fileName)}
+                            </span>
+                        </td>
+                        <td class="py-3.5 px-4 text-xs text-slate-500">${item.tarikh}</td>
+                    `;
+                    tbody.appendChild(tr);
+                });
+            }
+        }
+
+        // Clear all submissions
+        function clearAllSubmissions() {
+            if (submissions.length === 0) return;
+            
+            submissions = [];
+            localStorage.removeItem('mmi_submissions_2027');
+            updateDashboard();
+        }
+
+        // Helper to prevent XSS
+        function escapeHtml(str) {
+            return str.replace(/&/g, "&amp;")
+                      .replace(/</g, "&lt;")
+                      .replace(/>/g, "&gt;")
+                      .replace(/"/g, "&quot;")
+                      .replace(/'/g, "&#039;");
+        }
+    </script>
+</body>
+</html>
